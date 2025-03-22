@@ -75,7 +75,7 @@
     </header>
 
     <!-- Banner de página -->
-    <div class="container-fluid page-header py-5 mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/centro1 (1).jpeg') center center no-repeat; background-size: cover;">
+    <div class="container-fluid page-header py-5 mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/img/centro1.jpeg?v=1') center center no-repeat; background-size: cover;">
         <div class="container py-5">
             <h1 class="display-3 text-white mb-3 animated slideInDown">Contacto</h1>
             <nav aria-label="breadcrumb animated slideInDown">
@@ -205,14 +205,12 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer text-white mt-5 pt-5 px-0 position-relative">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white text-uppercase mb-4">Dirección</h4>
-                    <p><i class="fa fa-map-marker-alt me-2"></i>C/principal No.6 la cienaga, km. 14 aut. Duarte, Sto. Dgo. Oeste, Rep. Dom.</p>
-                    <p><i class="fa fa-phone-alt me-2"></i>(829)-794-1621</p>
-                    <p><i class="fa fa-envelope me-2"></i>evelinaurbaez@gmail.com<br>liceomariateresaquidiello@gmail.com</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white text-
+    <div w3-include-html="includes/footer.html"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/w3.js/1.1.1/w3.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

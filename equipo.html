@@ -22,6 +22,39 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .node {
+            position: relative;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            width: 200px;
+            text-align: center;
+        }
+        .node-info {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 200px;
+        }
+        .node:hover .node-info {
+            display: block;
+        }
+        .director {
+            background-color: #ffe6e6;
+        }
+        .academic {
+            background-color: #e6ffe6;
+        }
+        .admin {
+            background-color: #e6f2ff;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -75,7 +108,7 @@
     </header>
 
     <!-- Banner de página -->
-    <div class="container-fluid page-header py-5 mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/centro1 (1).jpeg') center center no-repeat; background-size: cover;">
+    <div class="container-fluid page-header py-5 mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/img/centro1.jpeg?v=1') center center no-repeat; background-size: cover;">
         <div class="container py-5">
             <h1 class="display-3 text-white mb-3 animated slideInDown">Nuestro Equipo</h1>
             <nav aria-label="breadcrumb animated slideInDown">
@@ -93,123 +126,577 @@
             <div class="text-center mx-auto mb-5" style="max-width: 600px;">
                 <h6 class="text-primary text-uppercase mb-3">Nuestro Equipo</h6>
                 <h1>Profesionales Comprometidos</h1>
-                <p>Somos un grupo de profesionales comprometidos con la excelencia educativa y el desarrollo integral de nuestra comunidad escolar. Nuestra misión es garantizar un entorno de aprendizaje seguro, inclusivo y de calidad.</p>
+                <p class="mb-4">Somos un grupo de profesionales comprometidos con la excelencia educativa y el desarrollo integral de nuestra comunidad escolar. Nuestra misión es garantizar un entorno de aprendizaje seguro, inclusivo y de calidad.</p>
             </div>
 
-            <!-- Dirección y Coordinación -->
-            <h2 class="text-center mb-4">Dirección y Coordinación</h2>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="../img/Directora Evelin Betzaida Urbaez Perez.png" alt="Directora Evelin Betzaida Urbaez Perez">
-                            <div class="team-social">
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+            <!-- Jerarquía del Equipo -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="hierarchy-container mb-5">
+                        <div class="hierarchy-level">
+                            <h3 class="text-center mb-4">Estructura Organizativa</h3>
+                            <div class="hierarchy-tree">
+                                <div class="level-1">
+                                    <div class="node director">
+                                        <div class="icon-container">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span>Directora</span>
+                                        <div class="node-info">
+                                            <p>Lidera el equipo educativo</p>
+                                            <p>Supervisa todas las áreas</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="level-2">
+                                    <div class="node academic">
+                                        <div class="icon-container">
+                                            <i class="fas fa-chalkboard-teacher"></i>
+                                        </div>
+                                        <span>Coordinación Académica</span>
+                                        <div class="node-info">
+                                            <p>Supervisión académica</p>
+                                            <p>Calidad educativa</p>
+                                        </div>
+                                    </div>
+                                    <div class="node admin">
+                                        <div class="icon-container">
+                                            <i class="fas fa-cogs"></i>
+                                        </div>
+                                        <span>Coordinación Administrativa</span>
+                                        <div class="node-info">
+                                            <p>Gestión institucional</p>
+                                            <p>Recursos y personal</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Evelin Betzaida Urbaez Perez</h5>
-                            <p class="mb-0">Directora</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="../img/Coordinador docente Ramon Isidro Salcedo.png" alt="Coordinador docente Ramon Isidro Salcedo">
-                            <div class="team-social">
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Ramon Isidro Salcedo</h5>
-                            <p class="mb-0">Coordinador Docente</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="../img/Coordinadora docente de segundo ciclo Ivelisse Yliana Dechamps.png" alt="Coordinadora docente de segundo ciclo Ivelisse Yliana Dechamps">
-                            <div class="team-social">
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Ivelisse Yliana Dechamps</h5>
-                            <p class="mb-0">Coordinadora Docente de Segundo Ciclo</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row g-4 mt-3">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="../img/Coordinadora docente de primer ciclo Rosa Linda Geronimo de Oleo.png" alt="Coordinadora docente de primer ciclo Rosa Linda Geronimo de Oleo">
-                            <div class="team-social">
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+            <!-- Dirección -->
+            <section id="direccion">
+                <h2 class="text-center mb-4">Dirección</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Directora Evelin Betzaida Urbaez Perez.png" alt="Directora Evelin Betzaida Urbaez Perez">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Rosa Linda Geronimo de Oleo</h5>
-                            <p class="mb-0">Coordinadora Docente de Primer Ciclo</p>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Evelin Betzaida Urbaez Perez</h5>
+                                <p class="mb-0">Directora</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="../img/Coordinador de registro y control académico Yeison Jose Hernandez Castillo.png" alt="Coordinador de registro y control académico Yeison Jose Hernandez Castillo">
-                            <div class="team-social">
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Yeison Jose Hernandez Castillo</h5>
-                            <p class="mb-0">Coordinador de Registro y Control Académico</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="../img/Coordinador administrativo Nathael Santana Redman.png" alt="Coordinador administrativo Nathael Santana Redman">
-                            <div class="team-social">
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Nathael Santana Redman</h5>
-                            <p class="mb-0">Coordinador Administrativo</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </section>
 
-            <!-- Departamento de Psicología -->
-            <h2 class="text-center mb-4 mt-5">Departamento de Psicología</h2>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="../img/Psicóloga escolar Betsaida Ozoria Nova.png" alt="Psicóloga escolar Betsaida Ozoria Nova">
-                            <div class="team-social">
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+            <!-- Coordinación Académica -->
+            <section id="coordinacion-academica">
+                <h2 class="text-center mb-4">Coordinación Académica</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Coordinador docente Ramon Isidro Salcedo.png" alt="Coordinador docente Ramon Isidro Salcedo">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Ramon Isidro Salcedo</h5>
+                                <p class="mb-0">Coordinador Docente</p>
                             </div>
                         </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Betsaida Ozoria Nova</h5>
-                            <p class="mb-0">Psicóloga Escolar</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Coordinadora docente de segundo ciclo Ivelisse Yliana Dechamps.png" alt="Coordinadora docente de segundo ciclo Ivelisse Yliana Dechamps">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Ivelisse Yliana Dechamps</h5>
+                                <p class="mb-0">Coordinadora Docente de Segundo Ciclo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Coordinadora docente de primer ciclo Rosa Linda Geronimo de Oleo.png" alt="Coordinadora docente de primer ciclo Rosa Linda Geronimo de Oleo">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Rosa Linda Geronimo de Oleo</h5>
+                                <p class="mb-0">Coordinadora Docente de Primer Ciclo</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay
+            </section>
+
+            <!-- Coordinación Administrativa -->
+            <section id="coordinacion-administrativa">
+                <h2 class="text-center mb-4">Coordinación Administrativa</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Coordinador de registro y control académico Yeison Jose Hernandez Castillo.png" alt="Coordinador de registro y control académico Yeison Jose Hernandez Castillo">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Yeison Jose Hernandez Castillo</h5>
+                                <p class="mb-0">Coordinador de Registro y Control Académico</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Coordinador administrativo Nathael Santana Redman.png" alt="Coordinador administrativo Nathael Santana Redman">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Nathael Santana Redman</h5>
+                                <p class="mb-0">Coordinador Administrativo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Coordinador disciplinario Jhonatan Muñoz de la Cruz.png" alt="Coordinador disciplinario Jhonatan Muñoz de la Cruz">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Jhonatan Muñoz de la Cruz</h5>
+                                <p class="mb-0">Coordinador Disciplinario</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Psicólogos Escolares -->
+            <section id="psicologos-escolares">
+                <h2 class="text-center mb-4">Psicólogos Escolares</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Psicóloga escolar Ana Veneranda Agüero Mercedes.png" alt="Psicóloga escolar Ana Veneranda Agüero Mercedes">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Ana Veneranda Agüero Mercedes</h5>
+                                <p class="mb-0">Psicóloga Escolar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Psicólogo escolar Adriano de los Santos.png" alt="Psicólogo escolar Adriano de los Santos">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Adriano de los Santos</h5>
+                                <p class="mb-0">Psicólogo Escolar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Psicóloga escolar Betsaida Ozoria Nova.png" alt="Psicóloga escolar Betsaida Ozoria Nova">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Betsaida Ozoria Nova</h5>
+                                <p class="mb-0">Psicóloga Escolar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Secretarias y Digitadores -->
+            <section id="secretarias-y-digitadores">
+                <h2 class="text-center mb-4">Secretarias y Digitadores</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Secretaria Ana Eunice del Rosario Trinidad.png" alt="Secretaria Ana Eunice del Rosario Trinidad">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Ana Eunice del Rosario Trinidad</h5>
+                                <p class="mb-0">Secretaria</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Secretaria Haddy Regina Garcia Paulino.png" alt="Secretaria Haddy Regina Garcia Paulino">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Haddy Regina Garcia Paulino</h5>
+                                <p class="mb-0">Secretaria</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Digitador Starlin Francisco Goris Roman.png" alt="Digitador Starlin Francisco Goris Roman">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Starlin Francisco Goris Roman</h5>
+                                <p class="mb-0">Digitador</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Docentes de Matemáticas -->
+            <section id="docentes-de-matematicas">
+                <h2 class="text-center mb-4">Docentes de Matemáticas</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de matemáticas Angelina Decena Mendez.png" alt="Docente del área de matemáticas Angelina Decena Mendez">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Angelina Decena Méndez</h5>
+                                <p class="mb-0">Docente de Matemáticas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de matemáticas Carolina Antigua Castro.png" alt="Docente del área de matemáticas Carolina Antigua Castro">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Carolina Antigua Castro</h5>
+                                <p class="mb-0">Docente de Matemáticas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de matemáticas Gregorina Deprats Peña.png" alt="Docente del área de matemáticas Gregorina Deprats Peña">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Gregorina Deprats Peña</h5>
+                                <p class="mb-0">Docente de Matemáticas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Docentes de Ciencias Naturales -->
+            <section id="docentes-de-ciencias-naturales">
+                <h2 class="text-center mb-4">Docentes de Ciencias Naturales</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de ciencias naturales Digna Esther Severino Rosario.png" alt="Docente del área de ciencias naturales Digna Esther Severino Rosario">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Digna Esther Severino Rosario</h5>
+                                <p class="mb-0">Docente de Ciencias Naturales</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de ciencias naturales Juana Paola Peña Rodríguez.png" alt="Docente del área de ciencias naturales Juana Paola Peña Rodríguez">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Juana Paola Peña Rodríguez</h5>
+                                <p class="mb-0">Docente de Ciencias Naturales</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de ciencias naturales Olga Lidia Cano Severino.png" alt="Docente del área de ciencias naturales Olga Lidia Cano Severino">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Olga Lidia Cano Severino</h5>
+                                <p class="mb-0">Docente de Ciencias Naturales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Docentes de Ciencias Sociales -->
+            <section id="docentes-de-ciencias-sociales">
+                <h2 class="text-center mb-4">Docentes de Ciencias Sociales</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de Ciencias Sociales Ana María Alberto de los Santos.png" alt="Docente del área de Ciencias Sociales Ana María Alberto de los Santos">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Ana María Alberto de los Santos</h5>
+                                <p class="mb-0">Docente de Ciencias Sociales</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de Ciencias Sociales Katiuska Marleny Sanchez Aquino.png" alt="Docente del área de Ciencias Sociales Katiuska Marleny Sanchez Aquino">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Katiuska Marleny Sánchez Aquino</h5>
+                                <p class="mb-0">Docente de Ciencias Sociales</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de Ciencias Sociales Nelson Jose Lebron Santiago.png" alt="Docente del área de Ciencias Sociales Nelson Jose Lebron Santiago">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Nelson José Lebrón Santiago</h5>
+                                <p class="mb-0">Docente de Ciencias Sociales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Docentes de Lengua Española -->
+            <section id="docentes-de-lengua-espanola">
+                <h2 class="text-center mb-4">Docentes de Lengua Española</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de Lengua Española Alexandra Hernández Frías.png" alt="Docente del área de Lengua Española Alexandra Hernández Frías">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Alexandra Hernández Frías</h5>
+                                <p class="mb-0">Docente de Lengua Española</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de Lengua Española Fatima del Rosario Vicente Valdez.png" alt="Docente del área de Lengua Española Fatima del Rosario Vicente Valdez">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Fatima del Rosario Vicente Valdez</h5>
+                                <p class="mb-0">Docente de Lengua Española</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de Lengua Española Kenia Altagracia Brito.png" alt="Docente del área de Lengua Española Kenia Altagracia Brito">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Kenia Altagracia Brito</h5>
+                                <p class="mb-0">Docente de Lengua Española</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Docentes de Idiomas -->
+            <section id="docentes-de-idiomas">
+                <h2 class="text-center mb-4">Docentes de Idiomas</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de Idiomas Evelyn Pichardo Martinez.png" alt="Docente del área de Idiomas Evelyn Pichardo Martinez">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Evelyn Pichardo Martínez</h5>
+                                <p class="mb-0">Docente de Idiomas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de Idiomas Mario Vicente Valenzuela.png" alt="Docente del área de Idiomas Mario Vicente Valenzuela">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Mario Vicente Valenzuela</h5>
+                                <p class="mb-0">Docente de Idiomas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Docentes de Educación Física -->
+            <section id="docentes-de-educacion-fisica">
+                <h2 class="text-center mb-4">Docentes de Educación Física</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de Educación Física Agustín Martínez.png" alt="Docente del área de Educación Física Agustín Martínez">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Agustín Martínez</h5>
+                                <p class="mb-0">Docente de Educación Física</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item">
+                            <div class="overflow-hidden position-relative">
+                                <img class="img-fluid" src="assets/img/equipo/Docente del área de Educación Física Jefry Miguel Montero.png" alt="Docente del área de Educación Física Jefry Miguel Montero">
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Jefry Miguel Montero</h5>
+                                <p class="mb-0">Docente de Educación Física</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div w3-include-html="includes/footer.html"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/w3.js/1.1.1/w3.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

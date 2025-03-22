@@ -3,13 +3,13 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar tooltips de Bootstrap
+    // Initialize Bootstrap tooltips
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     });
 
-    // Botón volver arriba
+    // Back to Top button
     var backToTopButton = document.querySelector('.back-to-top');
     if (backToTopButton) {
         window.addEventListener('scroll', function() {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contador de estadísticas (para la sección de estadísticas si se implementa)
+    // Statistics counter (for statistics section if implemented)
     document.querySelectorAll('.counter').forEach(function(counter) {
         let counted = false;
         
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Función para verificar si un elemento está en el viewport
+    // Function to check if an element is in viewport
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
         return (
@@ -58,16 +58,47 @@ document.addEventListener('DOMContentLoaded', function() {
         );
     }
 
-    // Animación para elementos cuando entran en viewport
+    // Animation for elements when they enter viewport
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     
     if (animatedElements.length > 0) {
         window.addEventListener('scroll', function() {
             animatedElements.forEach(function(element) {
                 if (isInViewport(element)) {
-                    element.classList.add('animated');
+                    element.classList.add('visible');
                 }
             });
+        });
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
+
+    // Initialize carousel
+    const carousel = document.querySelector('#carouselExampleIndicators');
+    if (carousel) {
+        new bootstrap.Carousel(carousel, {
+            interval: 5000,
+            ride: 'carousel'
         });
     }
 
