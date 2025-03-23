@@ -22,6 +22,101 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Estilos personalizados para optimización -->
+    <style>
+        /* Barra superior compacta */
+        .top-bar {
+            padding: 5px 0; /* Reducido para ser más compacto */
+        }
+        .top-bar .d-flex {
+            gap: 15px; /* Espacio reducido entre elementos */
+        }
+        .top-bar p, .top-bar .me-4, .top-bar div {
+            font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+            margin: 0; /* Sin márgenes adicionales */
+        }
+        @media (max-width: 991px) {
+            .top-bar .d-flex {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px; /* Espacio aún más pequeño en móviles */
+            }
+            .top-bar .me-4 {
+                margin-right: 0 !important;
+            }
+            .top-bar .text-end {
+                text-align: center !important;
+            }
+        }
+        @media (max-width: 576px) {
+            .top-bar p, .top-bar .me-4, .top-bar div {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Navegación en móviles */
+        @media (max-width: 991px) {
+            .navbar-nav {
+                text-align: center;
+            }
+            .nav-link {
+                padding: 12px 0 !important;
+                font-size: 1rem;
+            }
+        }
+
+        /* Pie de página compacto */
+        .footer {
+            background-color: #1a2b49;
+            padding: 30px 0;
+        }
+        .footer h4 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .footer p, .footer a {
+            font-size: 0.85rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .footer a:hover {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer .social-icons a {
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 10px;
+            margin-top: 20px;
+        }
+        @media (max-width: 767px) {
+            .footer .col-md-6 {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .footer .social-icons {
+                justify-content: center !important;
+            }
+            .footer p, .footer a {
+                font-size: 0.8rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .footer h4 {
+                font-size: 1rem;
+            }
+            .footer p, .footer a {
+                font-size: 0.75rem;
+            }
+            .footer .social-icons a {
+                margin-right: 8px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -30,10 +125,10 @@
         <div class="top-bar bg-primary text-white py-2">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 d-none d-lg-block">
-                        <div class="d-flex">
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start">
                             <div class="me-4">
-                                <i class="fas fa-map-marker-alt me-2"></i>C/principal No.6 la cienaga, km. 14 aut. Duarte, Sto. Dgo. Oeste
+                                <i class="fas fa-map-marker-alt me-2"></i>C/principal No.6, La Ciénaga, Km. 14 Aut. Duarte
                             </div>
                             <div>
                                 <i class="fas fa-phone-alt me-2"></i>(829)-794-1621
@@ -41,7 +136,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 text-end">
-                        <div class="d-flex justify-content-end">
+                        <div class="d-flex justify-content-center justify-content-lg-end">
                             <a href="https://www.facebook.com/share/1GhR3EAaPh/?mibextid=wwXIfr" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.instagram.com/t.quidiello?igsh=OXpjMGZhNmtib3di" class="text-white me-3"><i class="fab fa-instagram"></i></a>
                             <a href="https://youtube.com/@liceomariateresaquidiello5557?si=kejUUSO5sZdvcmhN" class="text-white"><i class="fab fa-youtube"></i></a>
