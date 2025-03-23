@@ -23,17 +23,27 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Estilos personalizados para optimización móvil -->
+    <!-- Estilos personalizados para optimización -->
     <style>
-        /* Barra superior en móviles */
+        /* Barra superior compacta */
+        .top-bar {
+            padding: 5px 0; /* Reducido para ser más compacto */
+        }
+        .top-bar .d-flex {
+            gap: 15px; /* Espacio reducido entre elementos */
+        }
+        .top-bar p, .top-bar .me-4, .top-bar div {
+            font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+            margin: 0; /* Sin márgenes adicionales */
+        }
         @media (max-width: 991px) {
             .top-bar .d-flex {
                 flex-direction: column;
                 text-align: center;
+                gap: 5px; /* Espacio aún más pequeño en móviles */
             }
             .top-bar .me-4 {
                 margin-right: 0 !important;
-                margin-bottom: 8px;
             }
             .top-bar .text-end {
                 text-align: center !important;
@@ -41,7 +51,7 @@
         }
         @media (max-width: 576px) {
             .top-bar p, .top-bar .me-4, .top-bar div {
-                font-size: 0.85rem;
+                font-size: 0.8rem;
             }
         }
 
@@ -56,82 +66,73 @@
             }
         }
 
-        /* Carrusel en móviles */
+        /* Carrusel */
         @media (max-width: 767px) {
             .carousel-caption h1 {
-                font-size: 1.25rem; /* Reducido para más espacio */
+                font-size: 1.25rem;
                 line-height: 1.2;
             }
-            .carousel-caption .btn {
-                padding: 8px 15px; /* Más pequeño para evitar que se peguen */
-                font-size: 0.9rem;
-                margin: 5px; /* Espacio entre botones */
-                display: inline-block;
-            }
             .carousel-caption {
-                padding: 15px; /* Más espacio alrededor */
+                padding: 15px;
             }
         }
         @media (max-width: 576px) {
             .carousel-caption h1 {
-                font-size: 1rem; /* Aún más pequeño en pantallas muy pequeñas */
-            }
-            .carousel-caption .btn {
-                padding: 6px 12px;
-                font-size: 0.8rem;
-                margin: 4px;
+                font-size: 1rem;
             }
             .carousel-caption {
                 padding: 10px;
             }
         }
 
-        /* Pie de página */
+        /* Pie de página compacto */
         .footer {
             background-color: #1a2b49;
-            padding-top: 50px;
-            padding-bottom: 20px;
+            padding: 30px 0;
         }
         .footer h4 {
-            font-size: 1.25rem;
-            margin-bottom: 20px;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
         }
         .footer p, .footer a {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #ffffff;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .footer a:hover {
             color: #007bff;
             text-decoration: none;
         }
         .footer .social-icons a {
-            font-size: 1.2rem;
-            margin-right: 15px;
+            font-size: 1rem;
+            margin-right: 10px;
         }
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 15px;
-            margin-top: 30px;
+            padding-top: 10px;
+            margin-top: 20px;
         }
         @media (max-width: 767px) {
             .footer .col-md-6 {
-                margin-bottom: 25px;
+                margin-bottom: 20px;
                 text-align: center;
             }
             .footer .social-icons {
                 justify-content: center !important;
             }
             .footer p, .footer a {
-                font-size: 0.85rem;
+                font-size: 0.8rem;
             }
         }
         @media (max-width: 576px) {
             .footer h4 {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             .footer p, .footer a {
-                font-size: 0.8rem;
+                font-size: 0.75rem;
+            }
+            .footer .social-icons a {
+                margin-right: 8px;
             }
         }
     </style>
@@ -146,7 +147,7 @@
                     <div class="col-lg-6">
                         <div class="d-flex flex-wrap justify-content-center justify-content-lg-start">
                             <div class="me-4">
-                                <i class="fas fa-map-marker-alt me-2"></i>C/principal No.6 la cienaga, km. 14 aut. Duarte, Sto. Dgo. Oeste
+                                <i class="fas fa-map-marker-alt me-2"></i>C/principal No.6, La Ciénaga, Km. 14 Aut. Duarte
                             </div>
                             <div>
                                 <i class="fas fa-phone-alt me-2"></i>(829)-794-1621
@@ -187,7 +188,7 @@
         </nav>
     </header>
 
-    <!-- Carrusel principal -->
+    <!-- Carrusel principal (sin botones) -->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -200,8 +201,6 @@
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <h1 class="display-3 text-white mb-md-4 animated zoomIn">Educación de Calidad para un Futuro Brillante</h1>
-                        <a href="contacto.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Contáctanos</a>
-                        <a href="admisiones.html" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Admisiones</a>
                     </div>
                 </div>
             </div>
@@ -210,8 +209,6 @@
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <h1 class="display-3 text-white mb-md-4 animated zoomIn">Formando Líderes del Mañana</h1>
-                        <a href="nosotros.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Conócenos</a>
-                        <a href="oferta-academica.html" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Oferta Académica</a>
                     </div>
                 </div>
             </div>
@@ -220,8 +217,6 @@
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <h1 class="display-3 text-white mb-md-4 animated zoomIn">Experiencia Educativa Completa</h1>
-                        <a href="actividades.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Ver Actividades</a>
-                        <a href="admisiones.html" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Únete a Nosotros</a>
                     </div>
                 </div>
             </div>
@@ -326,11 +321,11 @@
     <!-- INICIO DEL PIE DE PÁGINA -->
     <footer class="footer text-white">
         <div class="container">
-            <div class="row g-5">
+            <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <h4 class="text-white text-uppercase mb-4">Liceo María Teresa Quidiello</h4>
-                    <p>Institución educativa comprometida con la formación integral y la excelencia académica de jóvenes y adolescentes.</p>
-                    <div class="social-icons d-flex justify-content-start mt-4">
+                    <p>Formación integral y excelencia académica.</p>
+                    <div class="social-icons d-flex justify-content-start mt-3">
                         <a href="https://www.facebook.com/share/1GhR3EAaPh/?mibextid=wwXIfr" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/t.quidiello?igsh=OXpjMGZhNmtib3di" class="text-white me-3"><i class="fab fa-instagram"></i></a>
                         <a href="https://youtube.com/@liceomariateresaquidiello5557?si=kejUUSO5sZdvcmhN" class="text-white"><i class="fab fa-youtube"></i></a>
@@ -338,18 +333,17 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <h4 class="text-white text-uppercase mb-4">Contacto</h4>
-                    <p><i class="fa fa-map-marker-alt me-2"></i>C/principal No.6 la cienaga, km. 14 aut. Duarte, Sto. Dgo. Oeste</p>
+                    <p><i class="fa fa-map-marker-alt me-2"></i>C/principal No.6, La Ciénaga, Km. 14 Aut. Duarte</p>
                     <p><i class="fa fa-phone-alt me-2"></i>(829)-794-1621</p>
                     <p><i class="fa fa-envelope me-2"></i>contacto@quidiello.edu.do</p>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <h4 class="text-white text-uppercase mb-4">Horario</h4>
-                    <p><i class="fa fa-clock me-2"></i>Lunes a Viernes: 8:00 AM - 4:00 PM</p>
-                    <p><i class="fa fa-clock me-2"></i>Sábado: Cerrado</p>
-                    <p><i class="fa fa-clock me-2"></i>Domingo: Cerrado</p>
+                    <p><i class="fa fa-clock me-2"></i>Lun-Vie: 8:00 AM - 4:00 PM</p>
+                    <p><i class="fa fa-clock me-2"></i>Sáb-Dom: Cerrado</p>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <h4 class="text-white text-uppercase mb-4">Enlaces Rápidos</h4>
+                    <h4 class="text-white text-uppercase mb-4">Enlaces</h4>
                     <ul class="list-unstyled">
                         <li><a href="index.html" class="text-white">Inicio</a></li>
                         <li><a href="nosotros.html" class="text-white">Quiénes Somos</a></li>
